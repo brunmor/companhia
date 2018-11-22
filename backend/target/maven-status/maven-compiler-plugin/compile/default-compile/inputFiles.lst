@@ -1,0 +1,6 @@
+/home/gabriel/Documentos/Trabalho ProgWeb/backend/src/main/java/com/grupo14/companhia_aerea/CompanhiaAereaApplication.java
+/home/gabriel/Documentos/Trabalho ProgWeb/backend/src/main/java/com/grupo14/companhia_aerea/repositorio/CompradorRepository.java
+/home/gabriel/Documentos/Trabalho ProgWeb/backend/src/main/java/com/grupo14/companhia_aerea/dominio/Comprador.java
+/home/gabriel/Documentos/Trabalho ProgWeb/backend/src/main/java/com/grupo14/companhia_aerea/servico/CompradorService.java
+/home/gabriel/Documentos/Trabalho ProgWeb/backend/src/main/java/com/grupo14/companhia_aerea/dominio/EntidadeBase.java
+/home/gabriel/Documentos/Trabalho ProgWeb/backend/src/main/java/com/grupo14/companhia_aerea/controlador/CompradorController.java

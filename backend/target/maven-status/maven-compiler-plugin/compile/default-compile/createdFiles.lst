@@ -1,0 +1,6 @@
+com/grupo14/companhia_aerea/repositorio/CompradorRepository.class
+com/grupo14/companhia_aerea/CompanhiaAereaApplication.class
+com/grupo14/companhia_aerea/controlador/CompradorController.class
+com/grupo14/companhia_aerea/dominio/Comprador.class
+com/grupo14/companhia_aerea/servico/CompradorService.class
+com/grupo14/companhia_aerea/dominio/EntidadeBase.class
