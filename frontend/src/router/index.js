@@ -6,11 +6,9 @@ import CompraTemplate from "../components/compra/Compra.template";
 Vue.use(Router);
 
 export default new Router({
-  mode: 'history',
   base: __dirname,
   routes: [
     {path: '/', component: HomeTemplate},
-    {path: '/home', component: CompraTemplate},
     {path: '/compra', component: CompraTemplate}
   ]
 });

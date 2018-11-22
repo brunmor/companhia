@@ -10,7 +10,7 @@ import CompraTemplate from './components/compra/Compra.template';
 
 export default {
   name: 'App',
-  components: { }
+  components: {  }
 }
 </script>
 
