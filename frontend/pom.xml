@@ -13,7 +13,7 @@
       <plugin>
         <groupId>com.github.eirslett</groupId>
         <artifactId>frontend-maven-plugin</artifactId>
-        <version>1.6</version>
+        <version>1.5</version>
         <executions>
           <!-- Install our node and npm version to run npm/node scripts-->
           <execution>
@@ -22,7 +22,7 @@
               <goal>install-node-and-npm</goal>
             </goals>
             <configuration>
-              <nodeVersion>v9.11.1</nodeVersion>
+              <nodeVersion>v10.13.0</nodeVersion>
             </configuration>
           </execution>
           <!-- Install all project dependencies -->
