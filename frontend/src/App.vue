@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <home></home>
   </div>
 </template>
 
@@ -11,10 +10,7 @@ import CompraTemplate from './components/compra/Compra.template';
 
 export default {
   name: 'App',
-  components: {
-    'home': HomeTemplate,
-    'compra': CompraTemplate
-  }
+  components: { }
 }
 </script>
 
