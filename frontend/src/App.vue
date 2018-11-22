@@ -7,10 +7,11 @@
 
 <script>
 import HomeTemplate from './components/home/Home.template';
+import CompraTemplate from './components/compra/Compra.template;'
 
 export default {
   name: 'App',
-  components: { 'home': HomeTemplate }
+  components: { 'home': CompraTemplate }
 }
 </script>
 
