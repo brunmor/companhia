@@ -1,6 +1,7 @@
 package com.grupo14.companhia_aerea.dominio;
 
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -9,10 +10,12 @@ import java.util.Date;
 @Entity
 public class Comprador extends EntidadeBase{
     private String nome;
-    private String cpf;
     private String email;
     private String telefone;
     private String endereco;
+
+    @Column(unique = true)
+    private String cpf;
 
     @Temporal(TemporalType.DATE)
     private Date dataDeNascimento;

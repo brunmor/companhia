@@ -1,8 +1,6 @@
 package com.grupo14.companhia_aerea.controlador;
 
-import com.grupo14.companhia_aerea.aplicacao.AdicionaComprador;
-import com.grupo14.companhia_aerea.aplicacao.CompradorDTO;
-import com.grupo14.companhia_aerea.repositorio.CompradorRepository;
+import com.grupo14.companhia_aerea.servico.CompradorDTO;
 import com.grupo14.companhia_aerea.servico.CompradorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -12,16 +10,21 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin(origins={"*"})
 public class CompradorController {
 
-    private final AdicionaComprador adicionaComprador;
+    private final CompradorService compradorService;
 
     @Autowired
-    public CompradorController(AdicionaComprador adicionaComprador) {
-        this.adicionaComprador = adicionaComprador;
+    public CompradorController(CompradorService compradorService) {
+        this.compradorService = compradorService;
     }
 
     @RequestMapping(method = RequestMethod.POST)
     public void adicionar(@RequestBody CompradorDTO compradorDTO) {
-        this.adicionaComprador.adicionar(compradorDTO);
+        this.compradorService.adicionar(compradorDTO);
     }
 
+    @RequestMapping(value = "/{cpf}", method = RequestMethod.GET)
+    @ResponseBody
+    public CompradorDTO buscarPorCpf(@PathVariable("cpf") String cpf) {
+        return this.compradorService.buscarPorCpf(cpf);
+    }
 }

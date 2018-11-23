@@ -4,7 +4,7 @@
 
     <h3>Já é cadastrado? Insira seu cpf para buscarmos os seus dados!</h3>
     <div id="buscarCompradorPorCpf">
-      <input type="text"> <button>Buscar</button>
+      <input type="text" v-model="cpfParaBuscar"> <button v-on:click="buscarComprador(cpfParaBuscar)">Buscar</button>
     </div><br>
 
     <label for="dadosDoComprador">Dados pessoais:</label>

@@ -5,13 +5,30 @@ import com.grupo14.companhia_aerea.repositorio.CompradorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
-
 @Service
 public class CompradorService {
 
+    private final CompradorRepository compradorRepository;
+
     @Autowired
-    CompradorRepository compradorRepository;
+    public CompradorService(CompradorRepository compradorRepository) {
+        this.compradorRepository = compradorRepository;
+    }
 
+    public void adicionar(CompradorDTO compradorDTO) {
+        Comprador comprador = compradorDTO.mapearParaComprador();
+        compradorRepository.save(comprador);
+    }
 
+    public CompradorDTO buscarPorCpf(String cpf) {
+        Comprador compradorRetornado = compradorRepository.buscarPorCpf(cpf);
+
+        if (compradorRetornado != null) {
+            CompradorDTO comprador = new CompradorDTO();
+            comprador.mapearParaDTO(compradorRepository.buscarPorCpf(cpf));
+            return comprador;
+        }
+
+        return null;
+    }
 }

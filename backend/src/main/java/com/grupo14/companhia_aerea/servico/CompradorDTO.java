@@ -1,4 +1,4 @@
-package com.grupo14.companhia_aerea.aplicacao;
+package com.grupo14.companhia_aerea.servico;
 
 import com.grupo14.companhia_aerea.dominio.Comprador;
 
