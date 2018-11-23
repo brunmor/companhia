@@ -41,6 +41,15 @@ export default {
       this.dadosDoComprador.telefone = comprador.telefone;
       this.dadosDoComprador.endereco = comprador.endereco;
     },
+    limparFormulario: function() {
+      console.log(this);
+      this.dadosDoComprador.nome = '';
+      this.dadosDoComprador.cpf = '';
+      this.dadosDoComprador.email = '';
+      this.dadosDoComprador.dataDeNascimento = '';
+      this.dadosDoComprador.telefone = '';
+      this.dadosDoComprador.endereco = '';
+    },
     gerarJsonDoComprador: function (dadosDoComprador) {
       return {
         'nome': dadosDoComprador.nome,

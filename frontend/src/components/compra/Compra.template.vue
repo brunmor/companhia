@@ -35,8 +35,8 @@
              v-model="dadosDoComprador.endereco"><br>
 
       <button>Salvar</button>
-
     </form>
+    <button v-on:click="limparFormulario">Limpar Formulário</button>
     <div id="pagamento">
       <p>Todo: Pagamento</p>
 
