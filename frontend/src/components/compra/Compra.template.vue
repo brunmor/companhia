@@ -1,6 +1,14 @@
 <template>
   <div class="compra">
-    <div id="dadosDoComprador">
+    <h1>Compra de passagens</h1>
+
+    <h3>Já é cadastrado? Insira seu cpf para buscarmos os seus dados!</h3>
+    <div id="buscarCompradorPorCpf">
+      <input type="text"> <button>Buscar</button>
+    </div><br>
+
+    <label for="dadosDoComprador">Dados pessoais:</label>
+    <form id="dadosDoComprador" v-on:submit.prevent="salvarComprador">
 
       <label for="nomeDoComprador">Nome: </label>
       <input id="nomeDoComprador" type="text"
@@ -24,10 +32,11 @@
 
       <label for="endereco">Endereço: </label>
       <input id="endereco" type="text"
-             v-model="dadosDoComprador.endereco">
+             v-model="dadosDoComprador.endereco"><br>
 
+      <button>Salvar</button>
 
-    </div>
+    </form>
     <div id="pagamento">
       <p>Todo: Pagamento</p>
 

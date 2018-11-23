@@ -1,29 +1,37 @@
-package com.grupo14.companhia_aerea.dominio;
+package com.grupo14.companhia_aerea.aplicacao;
 
+import com.grupo14.companhia_aerea.dominio.Comprador;
 
-import javax.persistence.Entity;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 import java.util.Date;
 
-@Entity
-public class Comprador extends EntidadeBase{
+public class CompradorDTO {
     private String nome;
     private String cpf;
     private String email;
+    private Date dataDeNascimento;
     private String telefone;
     private String endereco;
 
-    @Temporal(TemporalType.DATE)
-    private Date dataDeNascimento;
+    public CompradorDTO(){}
 
-    public Comprador() {}
+    public void mapearParaDTO(Comprador comprador) {
+        setNome(comprador.getNome());
+        setCpf(comprador.getCpf());
+        setEmail(comprador.getEmail());
+        setDataDeNascimento(comprador.getDataDeNascimento());
+        setTelefone(comprador.getTelefone());
+        setEndereco(comprador.getEndereco());
+    }
 
-    public Comprador(String nome, String cpf, String email, Date dataDeNascimento) {
-        this.nome = nome;
-        this.cpf = cpf;
-        this.email = email;
-        this.dataDeNascimento = dataDeNascimento;
+    public Comprador mapearParaComprador() {
+        Comprador comprador = new Comprador();
+        comprador.setNome(getNome());
+        comprador.setCpf(getCpf());
+        comprador.setEmail(getEmail());
+        comprador.setDataDeNascimento(getDataDeNascimento());
+        comprador.setTelefone(getTelefone());
+        comprador.setEndereco(getEndereco());
+        return comprador;
     }
 
     public String getNome() {

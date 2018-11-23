@@ -1,3 +1,5 @@
+import CompradorApi from '../../../api/Comprador.api';
+
 export default {
   name: 'compra',
   data() {
@@ -10,6 +12,22 @@ export default {
         telefone: '',
         endereco: ''
       }
+    }
+  },
+  methods: {
+    salvarComprador: function () {
+      let dadosDoCompradorJson = this.gerarJsonDoComprador(this.dadosDoComprador);
+      CompradorApi.salvarComprador(dadosDoCompradorJson);
+    },
+    gerarJsonDoComprador: function (dadosDoComprador) {
+      return {
+        'nome': dadosDoComprador.nome,
+        'cpf': dadosDoComprador.cpf,
+        'email': dadosDoComprador.email,
+        'dataDeNascimento': dadosDoComprador.dataDeNascimento,
+        'telefone':  dadosDoComprador.telefone,
+        'endereco': dadosDoComprador.endereco
+      };
     }
   }
 }
