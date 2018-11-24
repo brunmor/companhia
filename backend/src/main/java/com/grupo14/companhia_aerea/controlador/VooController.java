@@ -4,10 +4,7 @@ import com.grupo14.companhia_aerea.dominio.voo.VooService;
 import com.grupo14.companhia_aerea.servico.voo.VooDTO;
 import com.grupo14.companhia_aerea.servico.voo.VooServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,6 +19,11 @@ public class VooController {
     @ResponseBody
     public List<VooDTO> listarVoos(){
         return vooService.listarVoos();
+    }
+
+    @RequestMapping(method = RequestMethod.POST)
+    public void adicionarVoo(@RequestBody VooDTO vooDTO){
+        vooService.adicionaVoo(vooDTO);
     }
 
 

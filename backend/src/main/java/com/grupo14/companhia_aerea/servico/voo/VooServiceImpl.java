@@ -6,6 +6,7 @@ import com.grupo14.companhia_aerea.repositorio.VooRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,10 +23,52 @@ public class VooServiceImpl implements VooService {
         List<VooDTO> voosDtos = new ArrayList<>();
 
         for (Voo voo: voos) {
-            voosDtos.add(new VooDTO());
+            VooDTO vooDTO = new VooDTO();
+            vooDTO = mapearVooParaVooDTO(voo, vooDTO);
+            voosDtos.add(vooDTO);
+
         }
         return voosDtos;
 
     }
 
+    @Override
+    public void adicionaVoo(VooDTO vooDTO) {
+        Voo voo = mapearVooDTOParaVoo(vooDTO);
+
+        vooRepository.save(voo);
+    }
+
+    private Voo mapearVooDTOParaVoo(VooDTO vooDTO) {
+
+        Voo voo = new Voo(vooDTO.getCidadeDeOrigem(),
+                vooDTO.getCidadeDeDestino(),
+                LocalDate.of(retornaAno(vooDTO.getDataDeIda()), retornaMes(vooDTO.getDataDeIda()), retornaDia(vooDTO.getDataDeIda())),
+                LocalDate.of(retornaAno(vooDTO.getDataDeVolta()), retornaMes(vooDTO.getDataDeVolta()), retornaDia(vooDTO.getDataDeVolta()))
+        );
+
+        return voo;
+    }
+
+
+    private VooDTO mapearVooParaVooDTO(Voo voo, VooDTO vooDTO) {
+        vooDTO.setCidadeDeOrigem(voo.getCidadeDeOrigem());
+        vooDTO.setCidadeDeDestino(voo.getCidadeDeDestino());
+        vooDTO.setDataDeIda(voo.getDataDeIda().toString());
+        vooDTO.setDataDeVolta(voo.getDataDeVolta().toString());
+        vooDTO.setAssentos(voo.getAssentos());
+
+        return vooDTO;
+
+    }
+
+    private int retornaAno(String data){
+        return Integer.parseInt(data.split("/")[2]);
+    }
+    private int retornaMes(String data){
+        return Integer.parseInt(data.split("/")[1]);
+    }
+    private int retornaDia(String data){
+        return Integer.parseInt(data.split("/")[0]);
+    }
 }

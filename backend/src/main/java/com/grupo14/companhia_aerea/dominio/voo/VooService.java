@@ -8,4 +8,6 @@ import java.util.List;
 @Service
 public interface VooService {
     List<VooDTO> listarVoos();
+
+    void adicionaVoo(VooDTO vooDTO);
 }
