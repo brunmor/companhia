@@ -2,7 +2,7 @@ package com.grupo14.companhia_aerea.dominio.voo;
 
 import com.grupo14.companhia_aerea.dominio.EntidadeBase;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,6 +14,9 @@ public class Voo extends EntidadeBase {
     private String cidadeDeDestino;
     private LocalDate dataDeIda;
     private LocalDate dataDeVolta;
+    @ElementCollection
+    @CollectionTable(joinColumns=@JoinColumn())
+//    @AttributeOverride(name="streetAddress", column=@Column(name="STREET_ADDRESS"))
     private List<Assento> assentos;
 
     public Voo(String cidadeDeOrigem, String cidadeDeDestino, LocalDate dataDeIda, LocalDate dataDeVolta) {
@@ -53,13 +56,4 @@ public class Voo extends EntidadeBase {
         return this.assentos;
     }
 
-    private class Assento {
-        boolean ocupado;
-        int codigoDoAssento;
-
-        Assento(boolean ocupado, int codigoDoAssento){
-            this.ocupado = ocupado;
-            this.codigoDoAssento = codigoDoAssento;
-        }
-    }
 }
