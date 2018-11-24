@@ -1,6 +1,11 @@
-package com.grupo14.companhia_aerea.dominio;
+package com.grupo14.companhia_aerea.dominio.voo;
 
-public class Voo {
+import com.grupo14.companhia_aerea.dominio.EntidadeBase;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Voo extends EntidadeBase {
     private String cidadeDeOrigem;
 
     public Voo(String cidadeDeOrigem) {
