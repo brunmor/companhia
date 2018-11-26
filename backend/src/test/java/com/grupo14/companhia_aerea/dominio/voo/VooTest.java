@@ -56,4 +56,13 @@ public class VooTest {
         assertNotNull (voo.getAssentos());
     }
 
+    @Test
+    public void deve_conter_cidade_de_origem(){
+        String cidadeDeOrigemEsperado = "Campo Grande";
+
+        Voo voo = new Voo(cidadeDeOrigemEsperado);
+
+        assert (cidadeDeOrigemEsperado == voo.getCidadeDeOrigem());
+    }
+
 }
