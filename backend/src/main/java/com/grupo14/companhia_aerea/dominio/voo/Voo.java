@@ -19,6 +19,9 @@ public class Voo extends EntidadeBase {
 //    @AttributeOverride(name="streetAddress", column=@Column(name="STREET_ADDRESS"))
     private List<Assento> assentos;
 
+    public Voo() {
+    }
+
     public Voo(String cidadeDeOrigem, String cidadeDeDestino, LocalDate dataDeIda, LocalDate dataDeVolta) {
 
         this.cidadeDeOrigem = cidadeDeOrigem;

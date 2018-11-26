@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/voo")
+@RequestMapping("/voos")
 public class VooController {
 
     @Autowired
@@ -25,6 +25,5 @@ public class VooController {
     public void adicionarVoo(@RequestBody VooDTO vooDTO){
         vooService.adicionaVoo(vooDTO);
     }
-
 
 }
