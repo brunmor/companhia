@@ -1,6 +1,5 @@
 package com.grupo14.companhia_aerea.controlador;
 
-import com.grupo14.companhia_aerea.dominio.voo.VooService;
 import com.grupo14.companhia_aerea.servico.voo.VooDTO;
 import com.grupo14.companhia_aerea.servico.voo.VooServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +12,7 @@ import java.util.List;
 public class VooController {
 
     @Autowired
-    VooService vooService;
+    VooServiceImpl vooService;
 
     @RequestMapping(method = RequestMethod.GET)
     @ResponseBody
