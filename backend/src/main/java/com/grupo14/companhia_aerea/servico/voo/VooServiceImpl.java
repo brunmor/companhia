@@ -41,11 +41,12 @@ public class VooServiceImpl implements VooService {
 
     private Voo mapearVooDTOParaVoo(VooDTO vooDTO) {
 
+
         Voo voo = new Voo(vooDTO.getCidadeDeOrigem(),
-                vooDTO.getCidadeDeDestino(),
-                LocalDate.of(retornaAno(vooDTO.getDataDeIda()), retornaMes(vooDTO.getDataDeIda()), retornaDia(vooDTO.getDataDeIda())),
-                LocalDate.of(retornaAno(vooDTO.getDataDeVolta()), retornaMes(vooDTO.getDataDeVolta()), retornaDia(vooDTO.getDataDeVolta()))
-        );
+                vooDTO.getCidadeDeDestino(), LocalDate.of(retornaAno(vooDTO.getDataDeIda()),
+                retornaMes(vooDTO.getDataDeIda()), retornaDia(vooDTO.getDataDeIda())),
+                LocalDate.of(retornaAno(vooDTO.getDataDeVolta()), retornaMes(vooDTO.getDataDeVolta()),
+                retornaDia(vooDTO.getDataDeVolta())), vooDTO.getPreco());
 
         return voo;
     }
@@ -62,13 +63,11 @@ public class VooServiceImpl implements VooService {
 
     }
 
-    private int retornaAno(String data){
-        return Integer.parseInt(data.split("/")[2]);
-    }
+    private int retornaAno(String data) { return Integer.parseInt(data.split("-")[0]); }
     private int retornaMes(String data){
-        return Integer.parseInt(data.split("/")[1]);
+        return Integer.parseInt(data.split("-")[1]);
     }
     private int retornaDia(String data){
-        return Integer.parseInt(data.split("/")[0]);
+        return Integer.parseInt(data.split("-")[2]);
     }
 }

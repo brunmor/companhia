@@ -10,6 +10,7 @@ public class VooDTO {
     private String dataDeIda;
     private String dataDeVolta;
     private List<Assento> assentos;
+    private double preco;
 
     public VooDTO() {
     }
@@ -53,4 +54,8 @@ public class VooDTO {
     public void setAssentos(List<Assento> assentos) {
         this.assentos = assentos;
     }
+
+    public double getPreco() { return preco; }
+
+    public void setPreco(double preco) { this.preco = preco; }
 }

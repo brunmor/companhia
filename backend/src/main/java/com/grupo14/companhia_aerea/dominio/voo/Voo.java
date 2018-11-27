@@ -14,12 +14,16 @@ public class Voo extends EntidadeBase {
     private String cidadeDeDestino;
     private LocalDate dataDeIda;
     private LocalDate dataDeVolta;
+    private double preco;
     @ElementCollection
     @CollectionTable(joinColumns=@JoinColumn())
 //    @AttributeOverride(name="streetAddress", column=@Column(name="STREET_ADDRESS"))
     private List<Assento> assentos;
 
-    public Voo(String cidadeDeOrigem, String cidadeDeDestino, LocalDate dataDeIda, LocalDate dataDeVolta) {
+    public Voo() {
+    }
+
+    public Voo(String cidadeDeOrigem, String cidadeDeDestino, LocalDate dataDeIda, LocalDate dataDeVolta, double preco) {
 
         this.cidadeDeOrigem = cidadeDeOrigem;
 
@@ -34,6 +38,8 @@ public class Voo extends EntidadeBase {
         for (int i = 0; i < 60; i++){
             assentos.add(new Assento(false, i));
         }
+
+        this.preco = preco;
     }
 
     public String getCidadeDeOrigem() {
@@ -55,5 +61,7 @@ public class Voo extends EntidadeBase {
     public List<Assento> getAssentos() {
         return this.assentos;
     }
+
+    public double getPreco() { return this.preco; }
 
 }
