@@ -60,7 +60,7 @@ public class VooTest {
     public void deve_conter_cidade_de_origem(){
         String cidadeDeOrigemEsperado = "Campo Grande";
 
-        Voo voo = new Voo(cidadeDeOrigemEsperado);
+        Voo voo = new Voo(cidadeDeOrigemEsperado, cidadeDeDestino, dataDeIda, dataDeVolta);
 
         assert (cidadeDeOrigemEsperado == voo.getCidadeDeOrigem());
     }
