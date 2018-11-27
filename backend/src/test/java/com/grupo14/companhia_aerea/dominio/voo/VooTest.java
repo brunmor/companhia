@@ -11,8 +11,8 @@ import static org.junit.Assert.assertNotNull;
 
 public class VooTest {
 
-    String cidadeDeOrigem, cidadeDeDestino;
-    LocalDate dataDeIda, dataDeVolta;
+    private String cidadeDeOrigem, cidadeDeDestino;
+    private LocalDate dataDeIda, dataDeVolta;
 
     @Before
     public void iniciar(){
@@ -60,9 +60,9 @@ public class VooTest {
     public void deve_conter_cidade_de_origem(){
         String cidadeDeOrigemEsperado = "Campo Grande";
 
-        Voo voo = new Voo(cidadeDeOrigemEsperado);
+        Voo voo = new Voo(cidadeDeOrigemEsperado, cidadeDeDestino, dataDeIda, dataDeVolta);
 
-        assert (cidadeDeOrigemEsperado == voo.getCidadeDeOrigem());
+        assert (voo.getCidadeDeOrigem().equals(cidadeDeOrigemEsperado));
     }
 
 }

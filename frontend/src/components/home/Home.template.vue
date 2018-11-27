@@ -2,12 +2,15 @@
   <div class="home">
     <h1>{{titulo}}</h1>
 
+    <voo></voo>
+
     <div id="escolhaDePassagens">
       <label for="cidadeDestino">Escolha a cidade de destino</label>
       <select id="cidadeDestino">
         <option>Campo Grande</option>
         <option>São Paulo</option>
       </select><br/>
+
 
       <label for="listaDeDestinos">Destinos para {{cidade}}</label>
       <ul id="listaDeDestinos">

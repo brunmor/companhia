@@ -1,6 +1,6 @@
 <template>
   <div class="voo">
-    <h1>Lista de Voôs</h1>
+    <h2>Lista de Voôs</h2>
     <button :onclick="listarvoos()" >Listar Voos</button>
     <ul id="example-1">
       <li v-for="item in items">
