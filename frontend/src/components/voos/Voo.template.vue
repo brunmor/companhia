@@ -1,10 +1,13 @@
 <template>
   <div class="voo">
     <h2>Lista de Voôs</h2>
-    <button :onclick="listarvoos()" >Listar Voos</button>
     <ul id="example-1">
       <li v-for="item in items">
-        {{ item.cidadeDeDestino }}
+        <p>Origem: {{ item['cidadeDeOrigem'] }}</p>
+        <p>Destino: {{ item['cidadeDeDestino'] }}</p>
+        <p>Ida: {{ item['dataDeIda'] }}</p>
+        <p>Volta:{{ item['dataDeVolta'] }}</p>
+        <p>Valor: {{ item['preco'] }}</p>
       </li>
     </ul>
   </div>

@@ -4,13 +4,12 @@ export default {
   name: 'voo',
   data() {
     return {
-        items:[2],
-
+        items:[{
+          'cidade' : 'Campo Grade'
+        }]
     }
-
   },
-  methods: {
-    listarvoos: function () {
+  created: function () {
       VooApi.listarVoos()
         .then((voos) => {
           if (voos !== null) {
@@ -21,6 +20,5 @@ export default {
     cadastrarVoosPadrao: () => {
       console.log("Vou cadastrar, em");
     }
-  }
 }
 
