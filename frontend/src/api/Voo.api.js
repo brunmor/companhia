@@ -13,4 +13,8 @@ export default class VooApi {
   static buscarVoo(id) {
     return http.getJson(`/voos/${id}`);
   }
+
+  static buscarCidadesDeDestino() {
+    return http.getJson(`/voos/cidadesDeDestino`);
+  }
 }

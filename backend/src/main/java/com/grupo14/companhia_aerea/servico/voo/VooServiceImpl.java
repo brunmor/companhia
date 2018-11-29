@@ -49,6 +49,13 @@ public class VooServiceImpl implements VooService {
         return vooDTO;
     }
 
+    public List<String> buscarCidadesDeDestino() {
+        List<String> cidadesDeDestino;
+        cidadesDeDestino = vooRepository.buscarCidadesDeDestino();
+
+        return cidadesDeDestino;
+    }
+
     private Voo mapearVooDTOParaVoo(VooDTO vooDTO) {
 
 

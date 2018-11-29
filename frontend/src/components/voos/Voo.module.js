@@ -16,9 +16,6 @@ export default {
             this.items = voos;
           }
         });
-    },
-    cadastrarVoosPadrao: () => {
-      console.log("Vou cadastrar, em");
     }
 }
 

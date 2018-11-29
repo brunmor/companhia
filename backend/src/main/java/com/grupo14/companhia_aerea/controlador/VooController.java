@@ -30,4 +30,8 @@ public class VooController {
     public VooDTO listarVoo(@PathVariable Long id){
         return vooService.buscaVoo(id);
     }
+
+    @RequestMapping(value = "/cidadesDeDestino", method = RequestMethod.GET)
+    @ResponseBody
+    public List<String> buscarCidadesDeDestino() { return vooService.buscarCidadesDeDestino(); }
 }
