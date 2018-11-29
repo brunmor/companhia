@@ -69,6 +69,7 @@ public class VooServiceImpl implements VooService {
         vooDTO.setDataDeIda(voo.getDataDeIda().toString());
         vooDTO.setDataDeVolta(voo.getDataDeVolta().toString());
         vooDTO.setAssentos(voo.getAssentos());
+        vooDTO.setPreco(voo.getPreco());
 
         return vooDTO;
 

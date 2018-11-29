@@ -96,3 +96,6 @@ buildNumber.properties
 node_modules
 .DS_Store
 docs/_book
+
+backend/src/main/resources/public/index.html
+frontend/package-lock.json
