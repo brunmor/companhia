@@ -25,4 +25,9 @@ public class VooController {
         vooService.adicionaVoo(vooDTO);
     }
 
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    @ResponseBody
+    public VooDTO listarVoo(@PathVariable Long id){
+        return vooService.buscaVoo(id);
+    }
 }

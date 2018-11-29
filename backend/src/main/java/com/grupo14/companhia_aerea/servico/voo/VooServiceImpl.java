@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class VooServiceImpl implements VooService {
@@ -24,7 +25,7 @@ public class VooServiceImpl implements VooService {
 
         for (Voo voo: voos) {
             VooDTO vooDTO = new VooDTO();
-            vooDTO = mapearVooParaVooDTO(voo, vooDTO);
+            vooDTO = mapearVooParaVooDTO(voo);
             voosDtos.add(vooDTO);
 
         }
@@ -37,6 +38,15 @@ public class VooServiceImpl implements VooService {
         Voo voo = mapearVooDTOParaVoo(vooDTO);
 
         vooRepository.save(voo);
+    }
+
+    @Override
+    public VooDTO buscaVoo(Long id) {
+        Voo voo = vooRepository.findById(id).get();
+
+        VooDTO vooDTO = mapearVooParaVooDTO(voo);
+
+        return vooDTO;
     }
 
     private Voo mapearVooDTOParaVoo(VooDTO vooDTO) {
@@ -52,7 +62,8 @@ public class VooServiceImpl implements VooService {
     }
 
 
-    private VooDTO mapearVooParaVooDTO(Voo voo, VooDTO vooDTO) {
+    private VooDTO mapearVooParaVooDTO(Voo voo) {
+        VooDTO vooDTO = new VooDTO();
         vooDTO.setCidadeDeOrigem(voo.getCidadeDeOrigem());
         vooDTO.setCidadeDeDestino(voo.getCidadeDeDestino());
         vooDTO.setDataDeIda(voo.getDataDeIda().toString());

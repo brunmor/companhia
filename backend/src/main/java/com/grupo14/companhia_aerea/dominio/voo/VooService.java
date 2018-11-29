@@ -10,4 +10,6 @@ public interface VooService {
     List<VooDTO> listarVoos();
 
     void adicionaVoo(VooDTO vooDTO);
+
+    VooDTO buscaVoo(Long id);
 }
