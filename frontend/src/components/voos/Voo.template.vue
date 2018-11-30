@@ -1,13 +1,13 @@
 <template>
   <div class="voo">
-    <h2>Lista de Voôs</h2>
-    <ul id="example-1">
-      <li v-for="item in items">
-        <p>Origem: {{ item['cidadeDeOrigem'] }}</p>
-        <p>Destino: {{ item['cidadeDeDestino'] }}</p>
-        <p>Ida: {{ item['dataDeIda'] }}</p>
-        <p>Volta:{{ item['dataDeVolta'] }}</p>
-        <p>Valor: {{ item['preco'] }}</p>
+    <h2>Vôos para {{cidadeSelecionada}}</h2>
+    <ul id="example-1" v-if="voos.length > 0">
+      <li v-for="voo in voos">
+        <p>Origem: {{ voo.cidadeDeOrigem }}</p>
+        <p>Destino: {{ voo.cidadeDeDestino }}</p>
+        <p>Ida: {{ voo.dataDeIda }}</p>
+        <p>Volta:{{ voo.dataDeVolta }}</p>
+        <p>Valor: {{ voo.preco }}</p>
       </li>
     </ul>
   </div>

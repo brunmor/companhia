@@ -1,5 +1,6 @@
 package com.grupo14.companhia_aerea.controlador;
 
+import com.grupo14.companhia_aerea.dominio.voo.Voo;
 import com.grupo14.companhia_aerea.servico.voo.VooDTO;
 import com.grupo14.companhia_aerea.servico.voo.VooServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,4 +35,8 @@ public class VooController {
     @RequestMapping(value = "/cidadesDeDestino", method = RequestMethod.GET)
     @ResponseBody
     public List<String> buscarCidadesDeDestino() { return vooService.buscarCidadesDeDestino(); }
+
+    @RequestMapping(value = "/buscarVoosPorDestino/{cidadeDestino}", method = RequestMethod.GET)
+    @ResponseBody
+    public List<Voo> buscarVoosPorDestino(@PathVariable String cidadeDestino) { return vooService.buscarVoosPorDestino(cidadeDestino); }
 }
