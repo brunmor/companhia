@@ -2,16 +2,16 @@
   <div class="home">
     <h1>{{titulo}}</h1>
 
-    <voo></voo>
+    <!--<voo></voo>-->
 
     <div id="escolhaDePassagens">
       <label for="cidadeDestino">Escolha a cidade de destino</label>
-      <select id="cidadeDestino">
+      <select id="cidadeDestino" v-model="cidadeDestinoSelecionada">
+        <option disabled value="">Cidades disponíveis</option>
         <option v-for="cidade in cidades">{{cidade}}</option>
       </select><br/>
 
-
-      <label for="listaDeDestinos">Destinos para {{cidade}}</label>
+      <label for="listaDeDestinos">Destinos para {{cidadeDestinoSelecionada}}</label>
       <ul id="listaDeDestinos">
         <li>1
           <router-link to="/compra">

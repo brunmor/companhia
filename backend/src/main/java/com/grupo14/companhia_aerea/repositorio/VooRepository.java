@@ -14,6 +14,6 @@ public interface VooRepository extends JpaRepository<Voo, Long> {
     @Query(value = "SELECT comprador FROM Comprador comprador WHERE comprador.cpf = :cpf")
     Comprador buscarPorCpf(@Param("cpf")String cpf);
 
-    @Query(value = "SELECT DISTINCT cidade_de_destino FROM voo", nativeQuery = true)
+    @Query(value = "SELECT DISTINCT cidade_de_destino FROM voo ORDER BY cidade_de_destino", nativeQuery = true)
     List<String> buscarCidadesDeDestino();
 }

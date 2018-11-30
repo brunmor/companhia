@@ -7,7 +7,7 @@ export default {
   data() {
     return {
       titulo: 'Compra de Passagens Aéreas',
-      cidade: '',
+      cidadeDestinoSelecionada: '',
       cidades: []
     }
   },
