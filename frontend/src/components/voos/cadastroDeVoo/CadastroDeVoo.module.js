@@ -1,7 +1,9 @@
-import VoosPadrao from './VoosPadrao';
 import VooApi from '../../../api/Voo.api';
 import AeroportoApi from '../../../api/Aeroporto.api';
+import CompanhiaAereaApi from "../../../api/CompanhiaAerea.api";
+import VoosPadrao from './VoosPadrao';
 import AeroportosPadrao from "./AeroportosPadrao";
+import CompanhiasAereasPadrao from "./CompanhiasAereasPadrao";
 
 export default {
   name: 'cadastroDeVoo',
@@ -26,10 +28,19 @@ export default {
     cadastrarAeroportosPadrao: function() {
       let aeroportos = AeroportosPadrao.aeroportos;
       aeroportos.forEach((aeroporto) => {
-        console.log(aeroporto)
         if (aeroporto.nome !== "" && aeroporto.cidade !== "" && aeroporto.pais !== "" && aeroporto.codigoIATA !== ""
           && aeroporto.nome !== "\\N" && aeroporto.cidade !== "\\N" && aeroporto.pais !== "\\N" && aeroporto.codigoIATA !== "\\N") {
           AeroportoApi.salvarAeroporto(aeroporto);
+        }
+      });
+    },
+    cadastrarCompanhiasAereasPadrao: function() {
+      let companhiasAereas = CompanhiasAereasPadrao.companhiasAereas;
+      companhiasAereas.forEach((companhia) => {
+        if (companhia.nome !== "" && companhia.cidade !== "" && companhia.pais !== ""
+          && companhia.codigoICAO !== "" && companhia.nome !== "\\N" && companhia.cidade !== "\\N"
+          && companhia.pais !== "\\N" && companhia.codigoICAO !== "\\N" && companhia.ativo !== "N") {
+          CompanhiaAereaApi.salvarCompanhia(companhia);
         }
       });
     },
