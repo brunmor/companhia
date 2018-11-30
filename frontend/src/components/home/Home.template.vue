@@ -2,6 +2,7 @@
   <div class="home">
     <h1>{{titulo}}</h1>
 
+    <buscarVoo></buscarVoo><br>
 
     <div id="escolhaDePassagens">
       <label for="cidadeDestino">Escolha a cidade de destino</label>
