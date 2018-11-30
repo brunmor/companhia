@@ -5,6 +5,9 @@
       lista padrão de vôos.</label>
     <button id="cadastrarVoosPadrao" v-on:click="cadastrarVoosPadrao">Cadastrar!</button><br>
 
+    <label for="cadastrarAeroportosPadrao">Caso não tenha aeroportos cadastrados no  banco, clique aqui para cadastrar uma lista padrão de vôos.</label>
+    <button id="cadastrarAeroportosPadrao" v-on:click="cadastrarAeroportosPadrao">Cadastrar!</button><br>
+
     <label>Ou insira um novo vôo manualmente: </label><br><br>
     <form v-on:submit.prevent="salvarNovoVoo">
       <label for="cidadeOrigem">Cidade de origem: </label>
