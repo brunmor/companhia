@@ -21,4 +21,8 @@ export default class VooApi {
   static buscarVoosPorDestino(cidadeDestino) {
     return http.getJson(`/voos/buscarVoosPorDestino/${cidadeDestino}`)
   }
+
+  static salvarVoosAleatorios(n) {
+    return http.put(`/voos/${n}`, n);
+  }
 }

@@ -1,8 +1,9 @@
 <template>
   <div class="cadastroDeVoo">
     <h1>Cadastro De Vôos</h1>
-    <label for="cadastrarVoosPadrao">Caso não tenha vôos cadastrados no  banco, clique aqui para cadastrar uma lista.</label>
-    <button id="cadastrarVoosPadrao" v-on:click="cadastrarVoosPadrao">Cadastrar!</button><br>
+    <label for="cadastrarVoosPadrao">Cadastre um número de vôos aleatórios</label>
+    <input id="cadastrarVoosPadrao" type="number" v-model="numeroDeVoos">
+    <button v-on:click="cadastrarVoosPadrao">Cadastrar!</button><br>
 
     <label for="cadastrarAeroportosPadrao">Caso não tenha aeroportos cadastrados no  banco, clique aqui para cadastrar uma lista padrão.</label>
     <button id="cadastrarAeroportosPadrao" v-on:click="cadastrarAeroportosPadrao">Cadastrar!</button><br>

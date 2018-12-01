@@ -63,7 +63,7 @@ public class VooServiceImpl implements VooService {
 //        return voosRetornados;
 //    }
 
-    private Voo mapearVooDTOParaVoo(VooDTO vooDTO) {
+    public Voo mapearVooDTOParaVoo(VooDTO vooDTO) {
         List<Assento> assentos = vooDTO.getAssentosDTO()
                 .stream()
                 .map(assento -> new Assento(assento.isOcupado(), assento.getCodigoDoAssento()))
@@ -86,7 +86,7 @@ public class VooServiceImpl implements VooService {
         return voo;
     }
 
-    private VooDTO mapearVooParaVooDTO(Voo voo) {
+    public VooDTO mapearVooParaVooDTO(Voo voo) {
         List<AssentoDTO> assentos = voo.getAssentos()
                 .stream()
                 .map(assento -> new AssentoDTO(assento.isOcupado(), assento.getCodigoDoAssento()))

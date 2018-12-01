@@ -17,15 +17,15 @@ public class Voo extends EntidadeBase {
     @CollectionTable(joinColumns=@JoinColumn())
     private List<Assento> assentos;
 
-    @ManyToOne
+    @ManyToOne(cascade=CascadeType.ALL)
     @JoinColumn(name = "origem_id")
     private Aeroporto origem;
 
-    @ManyToOne
+    @ManyToOne(cascade=CascadeType.ALL)
     @JoinColumn(name = "destino_id")
     private Aeroporto destino;
 
-    @ManyToOne
+    @ManyToOne(cascade=CascadeType.ALL)
     @JoinColumn(name = "companhiaAerea_id")
     private CompanhiaAerea companhiaAerea;
 

@@ -30,12 +30,6 @@ public class GeradorDeVoos {
         this.gerador = new Random();
     }
 
-    public GeradorDeVoos(){
-        aeroportoService = null;
-        companhiaService = null;
-        this.gerador = new Random();
-    }
-
     public void gerarAeroportoDeOrigem() {
         List<Aeroporto> origens;
         origens = aeroportoService.buscarTodos();
@@ -68,6 +62,7 @@ public class GeradorDeVoos {
         List<CompanhiaAerea> companhias;
         companhias = companhiaService.buscarTodas();
         this.companhiaAerea = companhias.get(gerador.nextInt(companhias.size()));
+        System.out.println(companhiaAerea.getNome());
     }
 
     public double gerarValorEmDinheiroAleatorio() {

@@ -9,6 +9,7 @@ export default {
   name: 'cadastroDeVoo',
   data() {
     return {
+      numeroDeVoos: 0,
       novoVoo: {
         cidadeDeOrigem: '',
         cidadeDeDestino: '',
@@ -20,10 +21,7 @@ export default {
   },
   methods: {
     cadastrarVoosPadrao: function() {
-      let voos = VoosPadrao.voos;
-      voos.forEach((voo) => {
-        VooApi.salvarVoo(voo);
-      });
+      VooApi.salvarVoosAleatorios(this.numeroDeVoos);
     },
     cadastrarAeroportosPadrao: function() {
       let aeroportos = AeroportosPadrao.aeroportos;
