@@ -9,12 +9,14 @@
       @keydown.enter="onEnter"
     />
     <ul
+      id="autocomplete-results"
       v-show="isOpen"
       class="autocomplete-results"
     >
       <li
         class="loading"
-        v-if="isLoading">
+        v-if="isLoading"
+      >
         Loading results...
       </li>
       <li

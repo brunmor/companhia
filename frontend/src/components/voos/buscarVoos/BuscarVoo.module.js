@@ -1,5 +1,10 @@
+import Autocomplete from '../../autocomplete/Autocomplete.template';
+
 export default {
   name: "buscarVoo",
+  components: {
+    Autocomplete
+  },
   data() {
     return {
       titulo: "Módulo de busca de Vôo",
@@ -10,7 +15,7 @@ export default {
       dataDeVolta: '',
       numeroDeAdultos: 0,
       numeroDeCriancas: 0,
+      aeroportos: ['A', 'B', 'C'],
     }
   },
-  components: {  }
 }

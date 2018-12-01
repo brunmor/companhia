@@ -9,8 +9,8 @@
         <label for="aeroportoDeOrigem">Aeroporto de origem: </label>
         <input id="aeroportoDeOrigem" type="text" v-model="aeroportoDeOrigem"><br>
 
-        <label for="aeroportoDeDestino">Aeroporto de destino: </label>
-        <input id="aeroportoDeDestino" type="text" v-model="aeroportoDeDestino"><br>
+        <label>Aeroporto de destino: </label>
+        <autocomplete :items="aeroportos" v-model="aeroportosDestino"></autocomplete>
 
         <label for="dataDeIda">Data de ida: </label>
         <input id="dataDeIda" type="date" v-model="dataDeIda"><br>
