@@ -1,5 +1,6 @@
 .autocomplete {
   position: relative;
+  width: 130px;
 }
 
 .autocomplete-results {
@@ -8,7 +9,6 @@
   border: 1px solid #eeeeee;
   height: 120px;
   overflow: auto;
-  width: 100%;
 }
 
 .autocomplete-result {
@@ -18,8 +18,7 @@
   cursor: pointer;
 }
 
-.autocomplete-result.is-active,
 .autocomplete-result:hover {
-  background-color: #0615ae;
+  background-color: #4AAE9B;
   color: white;
 }

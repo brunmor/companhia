@@ -11,5 +11,6 @@ export default {
       numeroDeAdultos: 0,
       numeroDeCriancas: 0,
     }
-  }
+  },
+  components: {  }
 }
