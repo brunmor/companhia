@@ -54,7 +54,6 @@ public class Voo extends EntidadeBase {
         return assentos;
     }
 
-
     public Aeroporto getOrigem() {
         return origem;
     }
