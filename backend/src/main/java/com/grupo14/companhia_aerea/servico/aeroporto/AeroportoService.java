@@ -5,6 +5,8 @@ import com.grupo14.companhia_aerea.repositorio.AeroportoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class AeroportoService {
 
@@ -18,5 +20,9 @@ public class AeroportoService {
     public void adicionar(AeroportoDTO aeroportoDTO) {
         Aeroporto aeroporto = aeroportoDTO.mapearParaAeroporto();
         aeroportoRepository.save(aeroporto);
+    }
+
+    public List<Aeroporto> buscarTodos() {
+        return aeroportoRepository.findAll();
     }
 }

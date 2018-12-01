@@ -5,6 +5,8 @@ import com.grupo14.companhia_aerea.repositorio.CompanhiaAereaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class CompanhiaAereaService {
 
@@ -18,5 +20,9 @@ public class CompanhiaAereaService {
     public void adicionar(CompanhiaAereaDTO companhiaAereaDTO) {
         CompanhiaAerea companhiaAerea = companhiaAereaDTO.mapearParaCompanhia();
         companhiaAereaRepository.save(companhiaAerea);
+    }
+
+    public List<CompanhiaAerea> buscarTodas() {
+        return companhiaAereaRepository.findAll();
     }
 }

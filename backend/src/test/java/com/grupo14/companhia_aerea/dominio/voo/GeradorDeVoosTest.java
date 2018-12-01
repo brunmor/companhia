@@ -7,8 +7,8 @@ import static org.junit.Assert.*;
 public class GeradorDeVoosTest {
 
     @Test
-    public void gerarValorParaAdulto() {
-        GeradorDeVoos gerador = new GeradorDeVoos();
-        gerador.gerarValorParaAdulto();
+    public void gerarDataDeIda() {
+        GeradorDeVoos geradorDeVoos = new GeradorDeVoos();
+        geradorDeVoos.gerarDataDeIda();
     }
 }
