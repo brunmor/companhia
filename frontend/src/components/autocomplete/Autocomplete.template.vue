@@ -34,4 +34,4 @@
 </template>
 
 <script src="./Autocomplete.module.js"></script>
-<style src="./Autocomplete.style.css"></style>
+<style scoped src="./Autocomplete.style.css"></style>

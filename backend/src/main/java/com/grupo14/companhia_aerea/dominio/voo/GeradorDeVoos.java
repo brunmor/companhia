@@ -62,7 +62,6 @@ public class GeradorDeVoos {
         List<CompanhiaAerea> companhias;
         companhias = companhiaService.buscarTodas();
         this.companhiaAerea = companhias.get(gerador.nextInt(companhias.size()));
-        System.out.println(companhiaAerea.getNome());
     }
 
     public double gerarValorEmDinheiroAleatorio() {

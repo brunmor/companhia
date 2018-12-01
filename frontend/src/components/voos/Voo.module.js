@@ -6,11 +6,11 @@ export default {
   watch: {
     cidadeSelecionada: function (cidade) {
       if (cidade !== "" || cidade !== undefined || cidade !== null) {
-        VooApi.buscarVoosPorDestino(cidade)
-          .then((voosRetornados) => {
-            console.log(voosRetornados);
-            this.voos = voosRetornados;
-          });
+        // VooApi.buscarVoosPorDestino(cidade)
+        //   .then((voosRetornados) => {
+        //     console.log(voosRetornados);
+        //     this.voos = voosRetornados;
+        //   });
       }
     }
   },

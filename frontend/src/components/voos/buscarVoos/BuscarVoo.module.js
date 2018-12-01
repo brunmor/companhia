@@ -1,4 +1,5 @@
 import Autocomplete from '../../autocomplete/Autocomplete.template';
+import AeroportoApi from '../../../api/Aeroporto.api';
 
 export default {
   name: "buscarVoo",
@@ -15,7 +16,21 @@ export default {
       dataDeVolta: '',
       numeroDeAdultos: 0,
       numeroDeCriancas: 0,
-      aeroportos: ['A', 'B', 'C'],
+      aeroportos: [],
     }
   },
+  mounted() {
+    AeroportoApi.buscarAeroportos()
+      .then((aerosRetornados) => {
+        console.log(aerosRetornados);
+        aerosRetornados.forEach((aero) => {
+          this.aeroportos.push(
+            aero.codigoIATA + ', '
+            + aero.nome + ', '
+            + aero.cidade + ', '
+            + aero.pais
+          );
+        })
+      });
+  }
 }
