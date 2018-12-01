@@ -32,30 +32,18 @@ public class Voo extends EntidadeBase {
     private Date dataDeIda;
     private double valorPorAdulto;
     private double valorPorCrianca;
-    private int numeroDeAdultos;
-    private int numeroDeCriancas;
-    private double precoTotal;
 
     public Voo() {}
 
     public Voo(Aeroporto origem, Aeroporto destino, Date dataDeIda, double valorPorAdulto,
-               double valorPorCrianca, int numeroDeAdultos, int numeroDeCriancas, CompanhiaAerea companhiaAerea) {
+               double valorPorCrianca, CompanhiaAerea companhiaAerea) {
         this.origem = origem;
         this.destino = destino;
         this.dataDeIda = dataDeIda;
         this.valorPorAdulto = valorPorAdulto;
         this.valorPorCrianca = valorPorCrianca;
-        this.numeroDeAdultos = numeroDeAdultos;
-        this.numeroDeCriancas = numeroDeCriancas;
         this.companhiaAerea = companhiaAerea;
-        this.precoTotal = calcularPrecoTotal();
         this.assentos = instanciarAssentos();
-    }
-
-    private double calcularPrecoTotal() {
-        double valorDosAdultos = getValorPorAdulto() * getNumeroDeAdultos();
-        double valorDasCriancas = getValorPorCrianca() * getNumeroDeCriancas();
-        return valorDosAdultos + valorDasCriancas;
     }
 
     private List<Assento> instanciarAssentos() {
@@ -113,30 +101,6 @@ public class Voo extends EntidadeBase {
 
     public void setValorPorCrianca(double valorPorCrianca) {
         this.valorPorCrianca = valorPorCrianca;
-    }
-
-    public int getNumeroDeAdultos() {
-        return numeroDeAdultos;
-    }
-
-    public void setNumeroDeAdultos(int numeroDeAdultos) {
-        this.numeroDeAdultos = numeroDeAdultos;
-    }
-
-    public int getNumeroDeCriancas() {
-        return numeroDeCriancas;
-    }
-
-    public void setNumeroDeCriancas(int numeroDeCriancas) {
-        this.numeroDeCriancas = numeroDeCriancas;
-    }
-
-    public double getPrecoTotal() {
-        return precoTotal;
-    }
-
-    public void setPrecoTotal(double precoTotal) {
-        this.precoTotal = precoTotal;
     }
 
     public CompanhiaAerea getCompanhiaAerea() {

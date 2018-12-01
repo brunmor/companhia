@@ -1,4 +1,4 @@
-package com.grupo14.companhia_aerea.dominio.voo;
+package com.grupo14.companhia_aerea.servico.voo;
 
 import com.grupo14.companhia_aerea.servico.voo.VooDTO;
 import org.springframework.stereotype.Service;

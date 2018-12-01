@@ -14,9 +14,6 @@ public class VooDTO {
     private Date dataDeIda;
     private double valorPorAdulto;
     private double valorPorCrianca;
-    private int numeroDeAdultos;
-    private int numeroDeCriancas;
-    private double precoTotal;
     private CompanhiaAereaDTO companhiaAereaDTO;
 
     public VooDTO() {}
@@ -67,30 +64,6 @@ public class VooDTO {
 
     public void setValorPorCrianca(double valorPorCrianca) {
         this.valorPorCrianca = valorPorCrianca;
-    }
-
-    public int getNumeroDeAdultos() {
-        return numeroDeAdultos;
-    }
-
-    public void setNumeroDeAdultos(int numeroDeAdultos) {
-        this.numeroDeAdultos = numeroDeAdultos;
-    }
-
-    public int getNumeroDeCriancas() {
-        return numeroDeCriancas;
-    }
-
-    public void setNumeroDeCriancas(int numeroDeCriancas) {
-        this.numeroDeCriancas = numeroDeCriancas;
-    }
-
-    public double getPrecoTotal() {
-        return precoTotal;
-    }
-
-    public void setPrecoTotal(double precoTotal) {
-        this.precoTotal = precoTotal;
     }
 
     public CompanhiaAereaDTO getCompanhiaAereaDTO() {

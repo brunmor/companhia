@@ -4,7 +4,6 @@ import com.grupo14.companhia_aerea.dominio.Aeroporto;
 import com.grupo14.companhia_aerea.dominio.CompanhiaAerea;
 import com.grupo14.companhia_aerea.dominio.voo.Assento;
 import com.grupo14.companhia_aerea.dominio.voo.Voo;
-import com.grupo14.companhia_aerea.dominio.voo.VooService;
 import com.grupo14.companhia_aerea.repositorio.VooRepository;
 import com.grupo14.companhia_aerea.servico.aeroporto.AeroportoDTO;
 import com.grupo14.companhia_aerea.servico.companhiaAerea.CompanhiaAereaDTO;
@@ -12,11 +11,8 @@ import com.grupo14.companhia_aerea.servico.voo.assento.AssentoDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @SuppressWarnings("Duplicates")
@@ -85,9 +81,6 @@ public class VooServiceImpl implements VooService {
         voo.setDataDeIda(vooDTO.getDataDeIda());
         voo.setValorPorAdulto(vooDTO.getValorPorAdulto());
         voo.setValorPorCrianca(vooDTO.getValorPorCrianca());
-        voo.setNumeroDeAdultos(vooDTO.getNumeroDeAdultos());
-        voo.setNumeroDeCriancas(vooDTO.getNumeroDeCriancas());
-        voo.setPrecoTotal(vooDTO.getPrecoTotal());
         voo.setCompanhiaAerea(companhiaAerea);
 
         return voo;
@@ -111,9 +104,6 @@ public class VooServiceImpl implements VooService {
         vooDTO.setDataDeIda(voo.getDataDeIda());
         vooDTO.setValorPorAdulto(voo.getValorPorAdulto());
         vooDTO.setValorPorCrianca(voo.getValorPorCrianca());
-        vooDTO.setNumeroDeAdultos(voo.getNumeroDeAdultos());
-        vooDTO.setNumeroDeCriancas(voo.getNumeroDeCriancas());
-        vooDTO.setPrecoTotal(voo.getPrecoTotal());
         vooDTO.setCompanhiaAereaDTO(companhiaAereaDTO);
 
         return vooDTO;
