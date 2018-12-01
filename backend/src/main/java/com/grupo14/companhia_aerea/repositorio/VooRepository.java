@@ -11,12 +11,12 @@ import java.util.List;
 
 @Repository
 public interface VooRepository extends JpaRepository<Voo, Long> {
-    @Query(value = "SELECT comprador FROM Comprador comprador WHERE comprador.cpf = :cpf")
-    Comprador buscarPorCpf(@Param("cpf")String cpf);
+    //@Query(value = "SELECT comprador FROM Comprador comprador WHERE comprador.cpf = :cpf")
+    //Comprador buscarPorCpf(@Param("cpf")String cpf);
 
-    @Query(value = "SELECT DISTINCT cidade_de_destino FROM voo ORDER BY cidade_de_destino", nativeQuery = true)
-    List<String> buscarCidadesDeDestino();
+    //@Query(value = "SELECT DISTINCT cidade_de_destino FROM voo ORDER BY cidade_de_destino", nativeQuery = true)
+    //List<String> buscarCidadesDeDestino();
 
-    @Query(value = "SELECT voo FROM Voo voo WHERE voo.cidadeDeDestino = :cidadeDestino")
-    List<Voo> buscarVoosPorDestino(String cidadeDestino);
+    //@Query(value = "SELECT voo FROM Voo voo WHERE voo.cidadeDeDestino = :cidadeDestino")
+    //List<Voo> buscarVoosPorDestino(String cidadeDestino);
 }

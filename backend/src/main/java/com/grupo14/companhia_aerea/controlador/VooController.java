@@ -32,11 +32,11 @@ public class VooController {
         return vooService.buscaVoo(id);
     }
 
-    @RequestMapping(value = "/cidadesDeDestino", method = RequestMethod.GET)
-    @ResponseBody
-    public List<String> buscarCidadesDeDestino() { return vooService.buscarCidadesDeDestino(); }
-
-    @RequestMapping(value = "/buscarVoosPorDestino/{cidadeDestino}", method = RequestMethod.GET)
-    @ResponseBody
-    public List<Voo> buscarVoosPorDestino(@PathVariable String cidadeDestino) { return vooService.buscarVoosPorDestino(cidadeDestino); }
+//    @RequestMapping(value = "/cidadesDeDestino", method = RequestMethod.GET)
+//    @ResponseBody
+//    public List<String> buscarCidadesDeDestino() { return vooService.buscarCidadesDeDestino(); }
+//
+//    @RequestMapping(value = "/buscarVoosPorDestino/{cidadeDestino}", method = RequestMethod.GET)
+//    @ResponseBody
+//    public List<Voo> buscarVoosPorDestino(@PathVariable String cidadeDestino) { return vooService.buscarVoosPorDestino(cidadeDestino); }
 }

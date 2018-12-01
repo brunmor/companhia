@@ -4,7 +4,6 @@ import javax.persistence.Entity;
 
 @Entity
 public class CompanhiaAerea extends EntidadeBase{
-
     private String nome;
     private String codigoICAO;
     private String pais;

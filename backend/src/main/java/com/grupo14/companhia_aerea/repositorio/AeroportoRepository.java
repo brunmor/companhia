@@ -1,6 +1,6 @@
 package com.grupo14.companhia_aerea.repositorio;
 
-import com.grupo14.companhia_aerea.dominio.voo.Aeroporto;
+import com.grupo14.companhia_aerea.dominio.Aeroporto;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

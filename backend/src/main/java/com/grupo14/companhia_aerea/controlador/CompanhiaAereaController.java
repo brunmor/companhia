@@ -1,7 +1,7 @@
 package com.grupo14.companhia_aerea.controlador;
 
-import com.grupo14.companhia_aerea.servico.CompanhiaAereaDTO;
-import com.grupo14.companhia_aerea.servico.CompanhiaAereaService;
+import com.grupo14.companhia_aerea.servico.companhiaAerea.CompanhiaAereaDTO;
+import com.grupo14.companhia_aerea.servico.companhiaAerea.CompanhiaAereaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

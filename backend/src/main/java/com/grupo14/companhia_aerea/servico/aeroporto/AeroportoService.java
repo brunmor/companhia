@@ -1,6 +1,6 @@
-package com.grupo14.companhia_aerea.servico;
+package com.grupo14.companhia_aerea.servico.aeroporto;
 
-import com.grupo14.companhia_aerea.dominio.voo.Aeroporto;
+import com.grupo14.companhia_aerea.dominio.Aeroporto;
 import com.grupo14.companhia_aerea.repositorio.AeroportoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

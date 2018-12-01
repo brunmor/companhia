@@ -1,4 +1,4 @@
-package com.grupo14.companhia_aerea.servico;
+package com.grupo14.companhia_aerea.servico.companhiaAerea;
 
 import com.grupo14.companhia_aerea.dominio.CompanhiaAerea;
 import com.grupo14.companhia_aerea.repositorio.CompanhiaAereaRepository;

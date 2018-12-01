@@ -1,23 +1,29 @@
-package com.grupo14.companhia_aerea.dominio.voo;
+package com.grupo14.companhia_aerea.servico.aeroporto;
 
-import com.grupo14.companhia_aerea.dominio.EntidadeBase;
+import com.grupo14.companhia_aerea.dominio.Aeroporto;
 
-import javax.persistence.Entity;
-
-@Entity
-public class Aeroporto extends EntidadeBase {
+public class AeroportoDTO {
     private String nome;
     private String cidade;
     private String pais;
     private String codigoIATA;
 
-    public Aeroporto(){}
+    public AeroportoDTO(){}
 
-    public Aeroporto(String nome, String cidade, String pais, String codigoIATA) {
-        this.nome = nome;
-        this.cidade = cidade;
-        this.pais = pais;
-        this.codigoIATA = codigoIATA;
+    public void mapearParaDTO(Aeroporto aeroporto) {
+        setNome(aeroporto.getNome());
+        setCidade(aeroporto.getCidade());
+        setPais(aeroporto.getPais());
+        setCodigoIATA(aeroporto.getCodigoIATA());
+    }
+
+    public Aeroporto mapearParaAeroporto() {
+        Aeroporto aeroporto = new Aeroporto();
+        aeroporto.setNome(getNome());
+        aeroporto.setCidade(getCidade());
+        aeroporto.setPais(getPais());
+        aeroporto.setCodigoIATA(getCodigoIATA());
+        return aeroporto;
     }
 
     public String getNome() {
