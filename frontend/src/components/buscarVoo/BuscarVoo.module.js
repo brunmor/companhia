@@ -22,7 +22,6 @@ export default {
   mounted() {
     AeroportoApi.buscarAeroportos()
       .then((aerosRetornados) => {
-        console.log(aerosRetornados);
         aerosRetornados.forEach((aero) => {
           this.aeroportos.push(
             aero.codigoIATA + ', '

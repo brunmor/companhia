@@ -6,11 +6,17 @@
       <input id="mostrarSecaoVolta" v-model="mostrarVolta" type="checkbox">
       <label for="mostrarSecaoVolta">Procurar também passagem de volta.</label>
       <section id="ida">
-        <label for="aeroportoDeOrigem">Origem: </label>
-        <input id="aeroportoDeOrigem" type="text" v-model="aeroportoDeOrigem">
+        <div id="aeroportoOrigem">
+          <label>Origem: </label>
+          <autocomplete :items="aeroportos" @input="search => {aeroportoDeOrigem = search}"></autocomplete>
+        <!--<input id="aeroportoDeOrigem" type="text" v-model="aeroportoDeOrigem">-->
+        </div>
 
-        <label for="aeroportoDeDestino">Destino: </label>
-        <input id="aeroportoDeDestino"  type="text" v-model="aeroportoDeDestino"><br>
+        <div id="aeroportoDestino">
+          <label>Destino: </label>
+          <!--<input id="aeroportoDeDestino"  type="text" v-model="aeroportoDeDestino"><br>-->
+          <autocomplete :items="aeroportos" @input="search => {aeroportoDeDestino = search}"></autocomplete>
+        </div>
 
         <label for="dataDeIda">Data de ida: </label>
         <input id="dataDeIda" type="date" v-model="dataDeIda">
