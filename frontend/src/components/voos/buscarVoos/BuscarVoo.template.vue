@@ -1,16 +1,18 @@
 <template>
+<body>
   <div class="buscarVoo">
     <h4>{{titulo}}</h4>
-
-    <form>
+ <h1>Pesquisar Vôos</h1>
+    <div>
+     <form>
       <input id="mostrarSecaoVolta" v-model="mostrarVolta" type="checkbox">
       <label for="mostrarSecaoVolta">Procurar também passagem de volta.</label>
       <section id="ida">
         <label for="aeroportoDeOrigem">Aeroporto de origem: </label>
         <input id="aeroportoDeOrigem" type="text" v-model="aeroportoDeOrigem"><br>
 
-        <label>Aeroporto de destino: </label>
-        <autocomplete :items="aeroportos" v-model="aeroportosDestino"></autocomplete>
+        <label for="aeroportoDeDestino">Aeroporto de destino: </label>
+        <input id="aeroportoDeDestino"  type="text" v-model="aeroportoDeDestino"><br>
 
         <label for="dataDeIda">Data de ida: </label>
         <input id="dataDeIda" type="date" v-model="dataDeIda"><br>
@@ -28,6 +30,8 @@
       <button>Procurar Vôos</button>
     </form>
   </div>
+  </div>
+  </body>
 </template>
 
 <script src="./BuscarVoo.module.js"></script>
