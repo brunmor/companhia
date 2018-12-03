@@ -1,5 +1,4 @@
 <template>
-<body>
   <div class="home">
     <buscarVoo></buscarVoo><br>
 
@@ -14,7 +13,6 @@
 
     </div>
   </div>
-  </body>
 </template>
 
 <script src="./Home.module.js"></script>

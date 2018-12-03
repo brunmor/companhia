@@ -1,5 +1,5 @@
 export default {
-  name: 'cabecalho',
+  name: 'cabecalhoTemplate',
   data(){
     return {
 
