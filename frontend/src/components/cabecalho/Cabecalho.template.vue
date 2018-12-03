@@ -21,7 +21,7 @@
 </template>
 
 
-<script src="Cabecalho.module.js">
+<script src="./Cabecalho.module.js">
 </script>
 
-<style scooped="" src="Cabecalho.style.css"></style>
+<style scooped src="./Cabecalho.style.css"></style>
