@@ -1,5 +1,5 @@
-import Autocomplete from '../../autocomplete/Autocomplete.template';
-import AeroportoApi from '../../../api/Aeroporto.api';
+import Autocomplete from '../autocomplete/Autocomplete.template';
+import AeroportoApi from '../../api/Aeroporto.api';
 
 export default {
   name: "buscarVoo",

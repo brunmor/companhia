@@ -1,9 +1,9 @@
 import Voo from '../voos/Voo.template';
 import VooApi from '../../api/Voo.api';
-import BuscarVoo from '../voos/buscarVoos/BuscarVoo.template';
+
 export default {
   name: 'home',
-  components: { Voo, BuscarVoo },
+  components: { Voo },
   data() {
     return {
       cidadeDestinoSelecionada: '',
