@@ -1,19 +1,21 @@
 <template>
   <div class="home">
-    <buscarVoo></buscarVoo><br>
+    <span class="border"></span>
+    <div class="container-fluid">
+      <h1>Jane Tour</h1>
 
-    <div id="escolhaDePassagens">
-      <label for="cidadeDestino">Escolha a cidade de destino</label>
-      <select id="cidadeDestino" v-model="cidadeDestinoSelecionada">
-        <option disabled value="">Cidades disponíveis</option>
-        <option v-for="cidade in cidades">{{cidade}}</option>
-      </select><br/>
-
-      <voo :cidadeSelecionada="cidadeDestinoSelecionada"></voo>
-
+      <div class="jumbotron">
+        <h1 class="display-4">Quer viajar?</h1>
+        <p class="lead">Aqui no companhia aerea temos os melhores preços para todos os destinos, confira!</p>
+        <hr class="my-4">
+        <p>A sua viagem a um clique de você!</p>
+        <p class="lead">
+          <router-link class="btn btn-primary btn-lg" to="buscarVoo">Buscar Passagens</router-link>
+        </p>
+      </div>
     </div>
   </div>
 </template>
 
 <script src="./Home.module.js"></script>
-<style scoped src="./Home.style.css"></style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
