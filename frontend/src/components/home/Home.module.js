@@ -13,14 +13,14 @@ export default {
     }
   },
   methods: {
-    buscarCidadesDeDestinoDisponiveis: function() {
-      VooApi.buscarCidadesDeDestino()
-        .then((cidadesRetornadas) => {
-          this.cidades = cidadesRetornadas;
-        });
-    }
+    // buscarCidadesDeDestinoDisponiveis: function() {
+    //   VooApi.buscarCidadesDeDestino()
+    //     .then((cidadesRetornadas) => {
+    //       this.cidades = cidadesRetornadas;
+    //     });
+    // }
   },
   beforeMount() {
-    this.buscarCidadesDeDestinoDisponiveis()
+    //this.buscarCidadesDeDestinoDisponiveis()
   }
 }
