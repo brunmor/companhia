@@ -1,16 +1,17 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 import HomeTemplate from './components/home/Home.template';
 import CompraTemplate from './components/compra/Compra.template';
+import router from './router/index';
 
 export default {
   name: 'App',
-  components: {  }
+  components: { router }
 }
 </script>
 
