@@ -5,10 +5,11 @@ body {
 }
 
 h1{
-  color: #EAF5FA;
+  color: #ffffff;
   padding: 40px 490px;
   margin: auto;
   font-family: "Arial";
+  font-size: 30px;
 
 }
 
@@ -23,7 +24,7 @@ input[type=text], select {
 }
 
 input[type=date], select {
-  width: 25%;
+  width: 13%;
   padding: 5px 8px;
   margin: 8px 0;
   display: inline-block;
@@ -33,7 +34,7 @@ input[type=date], select {
 }
 
 input[type=number], select {
-  width: 300px;
+  width: 5%;
   padding: 5px 8px;
   margin: 8px 0;
   display: inline-block;
@@ -58,7 +59,7 @@ input[type=submit]:hover {
 }
 
 button {
-  background-color: #66a3ff;
+  background-color: #055B83;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -88,3 +89,12 @@ label {
   font-family: Arial;
 }
 
+#dataDeVoltaLabel{
+  margin-left: 25px;
+
+}
+
+#numeroDeCriancasLabel{
+  margin-left: 120px;
+
+}
