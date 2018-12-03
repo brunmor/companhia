@@ -1,7 +1,5 @@
 <template>
-<body>
   <div class="home">
-    <cabecalho></cabecalho>
     <buscarVoo></buscarVoo><br>
 
     <div id="escolhaDePassagens">
@@ -15,7 +13,6 @@
 
     </div>
   </div>
-  </body>
 </template>
 
 <script src="./Home.module.js"></script>

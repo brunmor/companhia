@@ -1,12 +1,8 @@
 export default {
-  name: 'cabecalhoTemplate',
-  data(){
+  name: 'selecionarVoo',
+  data() {
     return {
 
     }
   }
-
-
-
-
 }

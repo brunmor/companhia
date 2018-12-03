@@ -1,20 +1,15 @@
-import Vue from 'vue';
-import router from './router/index';
-import vueResource from 'vue-resource';
-import CabecalhoTemplate from './components/cabecalho/Cabecalho.template'
+// The Vue build version to load with the `import` command
+// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+import Vue from 'vue'
+import App from './App'
+import router from './router'
 
-Vue.use(vueResource);
+Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
+  el: '#app',
   router,
-  template: `
-    <div id="app">
-        <cabecalho></cabecalho>
-        <router-view></router-view>
-    </div>
-  `,
-  components:{
-    CabecalhoTemplate
-  }
-}).$mount('#app');
+  components: { App },
+  template: '<App/>'
+});
