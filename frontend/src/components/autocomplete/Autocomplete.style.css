@@ -1,7 +1,6 @@
 .autocomplete {
-  position: relative;
-  width: 300px;
-  z-index: 1;
+  margin-top: -85px;
+  margin-left: 50px;
 }
 
 .autocomplete-results {
@@ -26,5 +25,5 @@
 }
 
 input {
-  width: 300px;
+  width: 800px;
 }

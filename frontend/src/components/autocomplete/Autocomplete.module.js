@@ -26,9 +26,6 @@ export default {
 
   methods: {
     onChange() {
-      // Let's warn the parent that a change was made
-      this.$emit('input', this.search);
-
       // Is the data given by an outside ajax request?
       if (this.isAsync) {
         this.isLoading = true;
@@ -47,6 +44,7 @@ export default {
     },
     setResult(result) {
       this.search = result;
+      this.$emit('input', this.search);
       this.isOpen = false;
     },
     onArrowDown(evt) {

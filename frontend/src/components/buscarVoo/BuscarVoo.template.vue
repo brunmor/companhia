@@ -1,28 +1,33 @@
 <template>
 <body>
- <h1>Pesquisar Vôos</h1>
+ <h1>Encontre sua Passagem! </h1>
     <div>
      <form>
       <input id="mostrarSecaoVolta" v-model="mostrarVolta" type="checkbox">
       <label for="mostrarSecaoVolta">Procurar também passagem de volta.</label>
       <section id="ida">
-        <label for="aeroportoDeOrigem">Origem: </label>
-        <input id="aeroportoDeOrigem" type="text" v-model="aeroportoDeOrigem">
+        <div id="aeroportoOrigem">
+          <label>Origem: </label>
+          <autocomplete :items="aeroportos" @input="search => {aeroportoDeOrigem = search}"></autocomplete>
+        </div>
 
-        <label for="aeroportoDeDestino">Destino: </label>
-        <input id="aeroportoDeDestino"  type="text" v-model="aeroportoDeDestino"><br>
+        <div id="aeroportoDestino">
+          <label>Destino: </label>
+          <autocomplete :items="aeroportos" @input="search => {aeroportoDeDestino = search}"></autocomplete>
+        </div>
 
         <label for="dataDeIda">Data de ida: </label>
         <input id="dataDeIda" type="date" v-model="dataDeIda">
 
-        <label for="dataDeVolta" v-if="mostrarVolta">Data de volta: </label>
-        <input id="dataDeVolta" v-if="mostrarVolta" type="date" v-model="dataDeVolta"><br>
+
+        <label id="dataDeVoltaLabel" for="dataDeVolta" v-if="mostrarVolta">Data de volta: </label>
+        <input id="dataDeVolta" v-if="mostrarVolta" type="date" v-model="dataDeVolta"><br><br>
 
         <label for="numeroDeAdultos">Número de adultos: </label>
-        <input id="numeroDeAdultos" type="number" min="0" max="5" v-model="numeroDeAdultos"><br>
+        <input id="numeroDeAdultos" type="number" min="0" max="5" v-model="numeroDeAdultos">
 
-        <label for="numeroDeCriancas">Número de crianças: </label>
-        <input id="numeroDeCriancas" type="number" min="0" max="5" v-model="numeroDeCriancas">
+        <label id="numeroDeCriancasLabel" for="numeroDeCriancas">Número de crianças: </label>
+        <input id="numeroDeCriancas" type="number" min="0" max="5" v-model="numeroDeCriancas"><br><br>
       </section>
 
       <button>Procurar Vôos</button>
