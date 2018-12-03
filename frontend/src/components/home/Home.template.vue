@@ -6,7 +6,7 @@
 
       <div class="jumbotron">
         <h1 class="display-4">Quer viajar?</h1>
-        <p class="lead">Aqui no companhia aerea temos os melhores preços para todos os destinos, confira!</p>
+        <p class="lead">Aqui na Jane Tour temos os melhores preços para todos os destinos, confira!</p>
         <hr class="my-4">
         <p>A sua viagem a um clique de você!</p>
         <p class="lead">
