@@ -7,7 +7,6 @@ export default {
   components: { Voo, BuscarVoo },
   data() {
     return {
-      titulo: 'Compra de Passagens Aéreas',
       cidadeDestinoSelecionada: '',
       cidades: [],
     }

@@ -1,7 +1,5 @@
 <template>
 <body>
-  <div class="buscarVoo">
-    <h4>{{titulo}}</h4>
  <h1>Pesquisar Vôos</h1>
     <div>
      <form>
@@ -29,7 +27,6 @@
 
       <button>Procurar Vôos</button>
     </form>
-  </div>
   </div>
   </body>
 </template>
