@@ -1,4 +1,5 @@
 <template>
+<body>
   <div class="home">
     <h1>{{titulo}}</h1>
 
@@ -15,6 +16,7 @@
 
     </div>
   </div>
+  </body>
 </template>
 
 <script src="./Home.module.js"></script>
