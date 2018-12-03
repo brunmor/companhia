@@ -30,7 +30,7 @@
         <input id="numeroDeCriancas" type="number" min="0" max="5" v-model="numeroDeCriancas"><br><br>
       </section>
 
-      <button>Procurar Vôos</button>
+      <button class="bProcurar">Procurar Vôos</button>
     </form>
   </div>
   </body>

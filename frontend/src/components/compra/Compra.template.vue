@@ -6,7 +6,7 @@
 
      <br><h3>Já é cadastrado? Insira seu cpf para buscarmos os seus dados!</h3>
      <div id="buscarCompradorPorCpf">
-       <input type="text" v-model="cpfParaBuscar"> <button v-on:click="buscarComprador(cpfParaBuscar)">Buscar</button>
+       <input type="text" v-model="cpfParaBuscar"> <button class="bBuscar" v-on:click="buscarComprador(cpfParaBuscar)">Buscar</button>
      </div><br>
 
      <label for="dadosDoComprador">Dados pessoais:</label>
@@ -36,9 +36,9 @@
        <input id="endereco" type="text"
               v-model="dadosDoComprador.endereco"><br><br>
 
-       <button>Salvar</button>
+       <button class="bSalvar">Salvar</button>
      </form>
-     <button v-on:click="limparFormulario">Limpar Formulário</button>
+     <button class="bLimpar" v-on:click="limparFormulario">Limpar Formulário</button>
 
    </div>
    </body>

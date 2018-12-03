@@ -60,7 +60,7 @@ input[type=submit]:hover {
 
 button {
   background-color: #055B83;
-  border: none;
+  border-radius: 4px;
   color: white;
   padding: 15px 32px;
   text-align: center;
@@ -73,8 +73,16 @@ button {
   transition-duration: 0.4s;
 
 }
+.bProcurar{
+  background-color: #055B83;
+  color: white;
+}
 
+.bProcurar:hover{
 
+  background-color: #fff;
+  color: black;
+}
 div {
   border-radius: 5px;
   background-color: #fff;
