@@ -91,7 +91,10 @@ button {
 .bLimpar{
   background-color: #8C9092;
   color: white;
-  padding: 10px 20px}
+  padding: 5px 12px;
+  margin-left: 50px;
+  margin-top: 6px;
+}
 
 .bLimpar:hover{
 
@@ -115,7 +118,7 @@ button {
 div {
   border-radius: 5px;
   background-color: #fff;
-  padding: 20px;
+  padding: 40px;
   margin: auto;
   width: 100%;
 

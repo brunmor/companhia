@@ -14,7 +14,7 @@
 
        <label for="nomeDoComprador">Nome: </label>
        <input id="nomeDoComprador" type="text"
-              v-model="dadosDoComprador.nome"> <br>
+              v-model="dadosDoComprador.nome">
 
        <label for="cpf">Cpf:   </label>
        <input id="cpf" type="text"
@@ -22,7 +22,7 @@
 
        <label for="email">Email: </label>
        <input id="email" type="text"
-              v-model="dadosDoComprador.email"><br>
+              v-model="dadosDoComprador.email">
 
        <label for="dataDeNascimento">Data De Nascimento: </label>
        <input id="dataDeNascimento" type="date"
@@ -36,7 +36,7 @@
        <input id="endereco" type="text"
               v-model="dadosDoComprador.endereco"><br><br>
 
-       <button class="bSalvar">Salvar</button>
+       <button class="bSalvar">Salvar</button><br>
      </form>
      <button class="bLimpar" v-on:click="limparFormulario">Limpar Formulário</button>
 
