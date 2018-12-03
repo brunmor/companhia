@@ -1,13 +1,18 @@
 body {
-  background-color: lightblue
+  background-color: #C9E4F1;
 
 }
 
 h1{
-
-  padding: 10px 310px;
+  color: #3D3F3F;
+  padding: 40px 420px;
   margin: auto;
   font-family: Arial;
+
+}
+h3{
+  color: #3D3F3F;
+  font-size: 25px;
 
 }
 
@@ -75,7 +80,7 @@ button {
 
 div {
   border-radius: 5px;
-  background-color: #f2f2f2;
+  background-color: #fff;
   padding: 20px;
   margin: auto;
   width: 50%;

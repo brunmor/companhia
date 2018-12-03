@@ -6,14 +6,14 @@
       <input id="mostrarSecaoVolta" v-model="mostrarVolta" type="checkbox">
       <label for="mostrarSecaoVolta">Procurar também passagem de volta.</label>
       <section id="ida">
-        <label for="aeroportoDeOrigem">Aeroporto de origem: </label>
-        <input id="aeroportoDeOrigem" type="text" v-model="aeroportoDeOrigem"><br>
+        <label for="aeroportoDeOrigem">Origem: </label>
+        <input id="aeroportoDeOrigem" type="text" v-model="aeroportoDeOrigem">
 
-        <label for="aeroportoDeDestino">Aeroporto de destino: </label>
+        <label for="aeroportoDeDestino">Destino: </label>
         <input id="aeroportoDeDestino"  type="text" v-model="aeroportoDeDestino"><br>
 
         <label for="dataDeIda">Data de ida: </label>
-        <input id="dataDeIda" type="date" v-model="dataDeIda"><br>
+        <input id="dataDeIda" type="date" v-model="dataDeIda">
 
         <label for="dataDeVolta" v-if="mostrarVolta">Data de volta: </label>
         <input id="dataDeVolta" v-if="mostrarVolta" type="date" v-model="dataDeVolta"><br>
