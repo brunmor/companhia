@@ -1,10 +1,4 @@
-Grupo 14
 
- - Gabriel Santana de Menezes (implementar as funcionalidade: listar voos e exibir detalhes de um voo)
- - Paulo Reis (implementar as funcionalidade: listar voos e exibir detalhes de um voo)
- - Sirlenon Araujo (implementar as funcionalidade: listar voos e exibir detalhes de um voo)
- - Matheus Soares (implementar as funcionalidade: comprar e pagar)
- - Bruna Moraes (implementar as funcionalidade: comprar e pagar)
 Tecnologias usadas:
 
  - Backend:
